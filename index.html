@@ -1,0 +1,790 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Nebula - Experience premium multi-category online shopping. Explore handpicked fashion, beauty, electronics, and home essentials. Live Better. Every Day.">
+  <meta name="keywords" content="Nebula, ecommerce, premium shopping, online store, fashion, electronics, cosmetics, homeware">
+  <title>Nebula | Premium Multi-Category Ecommerce Homepage</title>
+  
+  <!-- CSS Stylesheets -->
+  <link rel="stylesheet" href="styles.css">
+  
+  <!-- Swiper.js Slider CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+</head>
+<body>
+
+  <!-- ==================== HEADER SECTION ==================== -->
+  <header class="header-main" id="headerMain">
+    <div class="container header-container">
+      
+      <!-- Brand Logo -->
+      <a href="#" class="logo" aria-label="Nebula Homepage">
+        <div class="logo-icon-wrapper">
+          <i data-lucide="shopping-bag" width="22" height="22"></i>
+        </div>
+        <div class="logo-text">
+          <span class="logo-title">NEBULA</span>
+          <span class="logo-subtitle">Live Better. Every Day.</span>
+        </div>
+      </a>
+
+      <!-- Search Bar -->
+      <div class="search-wrapper">
+        <i data-lucide="search" class="search-icon-left" width="18" height="18"></i>
+        <form action="#" class="search-form" id="searchForm" style="width: 100%; height: 100%;">
+          <input 
+            type="text" 
+            class="search-input" 
+            placeholder="Search for products, brands and more..." 
+            aria-label="Search inputs"
+            required
+          >
+          <button type="submit" class="search-btn" aria-label="Submit Search">
+            <i data-lucide="arrow-right" width="18" height="18"></i>
+          </button>
+        </form>
+      </div>
+
+      <!-- Action Icons (Right) -->
+      <nav class="header-actions" aria-label="Customer quick links">
+        <a href="#" class="action-item" aria-label="Compare Products" id="compareBtn">
+          <i data-lucide="git-compare" width="20" height="20"></i>
+          <span>Compare</span>
+        </a>
+        <a href="#" class="action-item" aria-label="Wishlist Products" id="wishlistBtn">
+          <i data-lucide="heart" width="20" height="20"></i>
+          <span>Wishlist</span>
+        </a>
+        <a href="#" class="action-item" aria-label="Shopping Cart" id="cartBtn">
+          <div class="badge-wrapper">
+            <i data-lucide="shopping-cart" width="20" height="20"></i>
+            <span class="badge" id="cartCount">3</span>
+          </div>
+          <span>Cart</span>
+        </a>
+        <!-- Hamburger Menu for Mobile -->
+        <button class="mobile-hamburger" id="hamburgerMenuTrigger" aria-label="Open navigation menu">
+          <i data-lucide="menu" width="24" height="24"></i>
+        </button>
+      </nav>
+
+    </div>
+  </header>
+
+  <!-- ==================== SECOND NAVIGATION BAR ==================== -->
+  <nav class="nav-bar" aria-label="Main category navigation">
+    <div class="container nav-container">
+      
+      <!-- Left: Shop by Categories Dropdown -->
+      <div class="category-btn-wrapper">
+        <button class="category-dropdown-btn" aria-haspopup="true" aria-expanded="false" id="categoryMenuBtn">
+          <i data-lucide="menu" width="18" height="18"></i>
+          <span>Shop by Categories</span>
+        </button>
+        <!-- Floating Dropdown menu -->
+        <ul class="floating-sidebar-menu" role="menu" aria-labelledby="categoryMenuBtn">
+          <li role="none"><a href="#fashion" class="sidebar-item" role="menuitem"><span class="sidebar-item-content"><i data-lucide="shirt" width="16" height="16"></i>Women's Fashion</span><i data-lucide="chevron-right" class="sidebar-chevron" width="14" height="14"></i></a></li>
+          <li role="none"><a href="#fashion" class="sidebar-item" role="menuitem"><span class="sidebar-item-content"><i data-lucide="user" width="16" height="16"></i>Men's Fashion</span><i data-lucide="chevron-right" class="sidebar-chevron" width="14" height="14"></i></a></li>
+          <li role="none"><a href="#beauty" class="sidebar-item" role="menuitem"><span class="sidebar-item-content"><i data-lucide="sparkles" width="16" height="16"></i>Beauty & Personal Care</span><i data-lucide="chevron-right" class="sidebar-chevron" width="14" height="14"></i></a></li>
+          <li role="none"><a href="#electronics" class="sidebar-item" role="menuitem"><span class="sidebar-item-content"><i data-lucide="smartphone" width="16" height="16"></i>Electronics</span><i data-lucide="chevron-right" class="sidebar-chevron" width="14" height="14"></i></a></li>
+          <li role="none"><a href="#home" class="sidebar-item" role="menuitem"><span class="sidebar-item-content"><i data-lucide="home" width="16" height="16"></i>Home & Living</span><i data-lucide="chevron-right" class="sidebar-chevron" width="14" height="14"></i></a></li>
+          <li role="none"><a href="#sports" class="sidebar-item" role="menuitem"><span class="sidebar-item-content"><i data-lucide="dumbbell" width="16" height="16"></i>Sports & Outdoors</span><i data-lucide="chevron-right" class="sidebar-chevron" width="14" height="14"></i></a></li>
+          <li role="none"><a href="#toys" class="sidebar-item" role="menuitem"><span class="sidebar-item-content"><i data-lucide="toy-brick" width="16" height="16"></i>Toys & Games</span><i data-lucide="chevron-right" class="sidebar-chevron" width="14" height="14"></i></a></li>
+          <li role="none"><a href="#automotive" class="sidebar-item" role="menuitem"><span class="sidebar-item-content"><i data-lucide="car" width="16" height="16"></i>Automotive</span><i data-lucide="chevron-right" class="sidebar-chevron" width="14" height="14"></i></a></li>
+          <li role="none"><a href="#books" class="sidebar-item" role="menuitem"><span class="sidebar-item-content"><i data-lucide="book-open" width="16" height="16"></i>Books & Stationery</span><i data-lucide="chevron-right" class="sidebar-chevron" width="14" height="14"></i></a></li>
+          <li role="none"><a href="#pets" class="sidebar-item" role="menuitem"><span class="sidebar-item-content"><i data-lucide="dog" width="16" height="16"></i>Pet Supplies</span><i data-lucide="chevron-right" class="sidebar-chevron" width="14" height="14"></i></a></li>
+          <li role="none" style="border-top: 1px solid var(--border-color); margin-top: 5px; padding-top: 5px;"><a href="#offers" class="sidebar-item" role="menuitem"><span class="sidebar-item-content" style="color: var(--success);"><i data-lucide="percent" width="16" height="16"></i>Top Offers</span><i data-lucide="chevron-right" class="sidebar-chevron" width="14" height="14"></i></a></li>
+          <li role="none"><a href="#gifts" class="sidebar-item" role="menuitem"><span class="sidebar-item-content"><i data-lucide="gift" width="16" height="16"></i>Gift Cards</span><i data-lucide="chevron-right" class="sidebar-chevron" width="14" height="14"></i></a></li>
+        </ul>
+      </div>
+
+      <!-- Center: Navigation Links -->
+      <div class="nav-links">
+        <a href="#" class="nav-link-item">Shop</a>
+        <a href="#offers" class="nav-link-item">Deals</a>
+        <a href="#new" class="nav-link-item">New Arrivals</a>
+        <a href="#brands" class="nav-link-item">Brands</a>
+        <a href="#inspiration" class="nav-link-item">Inspiration</a>
+      </div>
+
+      <!-- Right: Support Contact -->
+      <div class="nav-support">
+        <i data-lucide="headphones" width="18" height="18" style="color: var(--accent-beige);"></i>
+        <span>Support: <a href="tel:+917763058747">(+91) 7763058747</a></span>
+      </div>
+
+    </div>
+  </nav>
+
+  <!-- ==================== MAIN CONTENT ==================== -->
+  <main>
+    <div class="container">
+      
+      <!-- ==================== HERO SECTION & SIDEBAR ==================== -->
+      <section class="hero-wrapper" aria-label="Introduction promotions">
+        
+        <!-- Persistent Left Sidebar Category Menu (Desktop only) -->
+        <aside class="persistent-sidebar" aria-label="Sidebar categories">
+          <ul style="list-style: none;">
+            <li><a href="#fashion" class="sidebar-item"><span class="sidebar-item-content"><i data-lucide="shirt" width="16" height="16"></i>Women's Fashion</span><i data-lucide="chevron-right" class="sidebar-chevron" width="14" height="14"></i></a></li>
+            <li><a href="#fashion" class="sidebar-item"><span class="sidebar-item-content"><i data-lucide="user" width="16" height="16"></i>Men's Fashion</span><i data-lucide="chevron-right" class="sidebar-chevron" width="14" height="14"></i></a></li>
+            <li><a href="#beauty" class="sidebar-item"><span class="sidebar-item-content"><i data-lucide="sparkles" width="16" height="16"></i>Beauty & Care</span><i data-lucide="chevron-right" class="sidebar-chevron" width="14" height="14"></i></a></li>
+            <li><a href="#electronics" class="sidebar-item"><span class="sidebar-item-content"><i data-lucide="smartphone" width="16" height="16"></i>Electronics</span><i data-lucide="chevron-right" class="sidebar-chevron" width="14" height="14"></i></a></li>
+            <li><a href="#home" class="sidebar-item"><span class="sidebar-item-content"><i data-lucide="home" width="16" height="16"></i>Home & Living</span><i data-lucide="chevron-right" class="sidebar-chevron" width="14" height="14"></i></a></li>
+            <li><a href="#sports" class="sidebar-item"><span class="sidebar-item-content"><i data-lucide="dumbbell" width="16" height="16"></i>Sports & Outdoors</span><i data-lucide="chevron-right" class="sidebar-chevron" width="14" height="14"></i></a></li>
+            <li><a href="#toys" class="sidebar-item"><span class="sidebar-item-content"><i data-lucide="toy-brick" width="16" height="16"></i>Toys & Games</span><i data-lucide="chevron-right" class="sidebar-chevron" width="14" height="14"></i></a></li>
+            <li><a href="#automotive" class="sidebar-item"><span class="sidebar-item-content"><i data-lucide="car" width="16" height="16"></i>Automotive</span><i data-lucide="chevron-right" class="sidebar-chevron" width="14" height="14"></i></a></li>
+            <li><a href="#books" class="sidebar-item"><span class="sidebar-item-content"><i data-lucide="book-open" width="16" height="16"></i>Books & Stationery</span><i data-lucide="chevron-right" class="sidebar-chevron" width="14" height="14"></i></a></li>
+            <li><a href="#pets" class="sidebar-item"><span class="sidebar-item-content"><i data-lucide="dog" width="16" height="16"></i>Pet Supplies</span><i data-lucide="chevron-right" class="sidebar-chevron" width="14" height="14"></i></a></li>
+            <li style="border-top: 1px solid var(--border-color); margin-top: 4px; padding-top: 4px;"><a href="#offers" class="sidebar-item"><span class="sidebar-item-content" style="color: var(--success);"><i data-lucide="percent" width="16" height="16"></i>Top Offers</span><i data-lucide="chevron-right" class="sidebar-chevron" width="14" height="14"></i></a></li>
+            <li><a href="#gifts" class="sidebar-item"><span class="sidebar-item-content"><i data-lucide="gift" width="16" height="16"></i>Gift Cards</span><i data-lucide="chevron-right" class="sidebar-chevron" width="14" height="14"></i></a></li>
+          </ul>
+        </aside>
+
+        <!-- Hero Banner: custom pure-JS slider -->
+        <div class="hero-slider-container" id="heroSlider">
+
+          <!-- LEFT: text content panels — crossfade between slides -->
+          <div class="hero-panels">
+
+            <div class="hero-panel active" data-panel="0">
+              <span class="hero-label">NEW COLLECTION</span>
+              <h1 class="hero-heading">Upgrade Your<br>Lifestyle Today</h1>
+              <p class="hero-desc">Find the latest trends, top brands and exclusive deals all in one place.</p>
+              <a href="#new" class="hero-cta">
+                <span>Shop Now</span>
+                <i data-lucide="arrow-right" width="16" height="16"></i>
+              </a>
+            </div>
+
+            <div class="hero-panel" data-panel="1">
+              <span class="hero-label" style="color:#FFDEB4;">SUMMER LAUNCH</span>
+              <h2 class="hero-heading">Uncompromising<br>Audio Quality</h2>
+              <p class="hero-desc">Experience next-level acoustic engineering with spatial sound capabilities.</p>
+              <a href="#electronics" class="hero-cta">
+                <span>Explore Sound</span>
+                <i data-lucide="arrow-right" width="16" height="16"></i>
+              </a>
+            </div>
+
+            <div class="hero-panel" data-panel="2">
+              <span class="hero-label">CLEAN LIVING</span>
+              <h2 class="hero-heading">Minimalist Spaces,<br>Premium Comfort</h2>
+              <p class="hero-desc">Redesign your space with curated modular armchairs and solid oak furniture.</p>
+              <a href="#home" class="hero-cta">
+                <span>View Catalog</span>
+                <i data-lucide="arrow-right" width="16" height="16"></i>
+              </a>
+            </div>
+
+          </div><!-- /.hero-panels -->
+
+          <!-- RIGHT: permanent model visual — never transitions -->
+          <div class="hero-visuals">
+            <div class="arch-backdrop"></div>
+            <div class="circle-graphic"></div>
+            <img src="assets/hero_lifestyle.png" alt="Lifestyle model in lavender blazer" class="model-image" loading="eager">
+            <div class="plant-pedestal">
+              <div class="pedestal"></div>
+              <div class="plant-pot"></div>
+              <svg class="plant-leaves" viewBox="0 0 100 120" xmlns="http://www.w3.org/2000/svg">
+                <path d="M50,110 C50,80 30,50 10,40 C30,35 45,60 50,85 C55,60 70,35 90,40 C70,50 50,80 50,110 Z" fill="#2E5A44"/>
+                <path d="M50,110 C50,70 38,40 25,25 C40,22 48,45 50,70 C52,45 60,22 75,25 C62,40 50,70 50,110 Z" fill="#3D7358"/>
+                <path d="M50,110 C50,60 45,30 35,10 C45,12 48,32 50,55 C52,32 55,12 65,10 C55,30 50,60 50,110 Z" fill="#4B8C6C"/>
+              </svg>
+            </div>
+          </div>
+
+          <!-- Dot navigation -->
+          <div class="hero-dots" id="heroDots">
+            <button class="hero-dot active" data-dot="0" aria-label="Slide 1"></button>
+            <button class="hero-dot" data-dot="1" aria-label="Slide 2"></button>
+            <button class="hero-dot" data-dot="2" aria-label="Slide 3"></button>
+          </div>
+
+        </div><!-- /#heroSlider -->
+
+
+
+
+      </section>
+
+
+
+
+      <!-- ==================== BROWSE BY CATEGORIES ==================== -->
+      <section class="categories-section animate-on-scroll" aria-labelledby="browse-categories-heading">
+        <div class="section-header">
+          <div class="section-title-group">
+            <h2 class="section-title" id="browse-categories-heading">Browse By Categories</h2>
+            <p class="section-subtitle">Explore handpicked collections for every part of your life.</p>
+          </div>
+        </div>
+
+        <div class="swiper categories-carousel-container" id="categoriesCarousel">
+          <div class="swiper-wrapper">
+            
+            <!-- Category 1 -->
+            <div class="swiper-slide category-card" onclick="window.location.hash='fashion'">
+              <div class="category-circle">
+                <img src="https://images.unsplash.com/photo-1584917865442-de89df76afd3?w=200&auto=format&fit=crop&q=80" alt="Fashion category icon" loading="lazy">
+              </div>
+              <span class="category-label">Fashion</span>
+            </div>
+
+            <!-- Category 2 -->
+            <div class="swiper-slide category-card" onclick="window.location.hash='beauty'">
+              <div class="category-circle">
+                <img src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?w=200&auto=format&fit=crop&q=80" alt="Beauty category icon" loading="lazy">
+              </div>
+              <span class="category-label">Beauty</span>
+            </div>
+
+            <!-- Category 3 -->
+            <div class="swiper-slide category-card" onclick="window.location.hash='electronics'">
+              <div class="category-circle">
+                <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=200&auto=format&fit=crop&q=80" alt="Electronics category icon" loading="lazy">
+              </div>
+              <span class="category-label">Electronics</span>
+            </div>
+
+            <!-- Category 4 -->
+            <div class="swiper-slide category-card" onclick="window.location.hash='home'">
+              <div class="category-circle">
+                <img src="https://images.unsplash.com/photo-1567538096630-e0c55bd6374c?w=200&auto=format&fit=crop&q=80" alt="Home & Living category icon" loading="lazy">
+              </div>
+              <span class="category-label">Home & Living</span>
+            </div>
+
+            <!-- Category 5 -->
+            <div class="swiper-slide category-card" onclick="window.location.hash='sports'">
+              <div class="category-circle">
+                <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=200&auto=format&fit=crop&q=80" alt="Sports category icon" loading="lazy">
+              </div>
+              <span class="category-label">Sports</span>
+            </div>
+
+            <!-- Category 6 -->
+            <div class="swiper-slide category-card" onclick="window.location.hash='toys'">
+              <div class="category-circle">
+                <img src="https://images.unsplash.com/photo-1559251606-c623743a6d76?w=200&auto=format&fit=crop&q=80" alt="Toys category icon" loading="lazy">
+              </div>
+              <span class="category-label">Toys</span>
+            </div>
+
+            <!-- Category 7 -->
+            <div class="swiper-slide category-card" onclick="window.location.hash='automotive'">
+              <div class="category-circle">
+                <img src="https://images.unsplash.com/photo-1578844251758-2f71da64c96f?w=200&auto=format&fit=crop&q=80" alt="Automotive category icon" loading="lazy">
+              </div>
+              <span class="category-label">Automotive</span>
+            </div>
+
+            <!-- Category 8 -->
+            <div class="swiper-slide category-card" onclick="window.location.hash='books'">
+              <div class="category-circle">
+                <img src="https://images.unsplash.com/photo-1497633762265-9d179a990aa6?w=200&auto=format&fit=crop&q=80" alt="Books category icon" loading="lazy">
+              </div>
+              <span class="category-label">Books</span>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- ==================== TRENDING PRODUCTS ==================== -->
+      <section class="trending-section animate-on-scroll" aria-labelledby="trending-heading">
+        <div class="section-header">
+          <div class="section-title-group">
+            <h2 class="section-title" id="trending-heading">Trending Right Now ⚡</h2>
+            <p class="section-subtitle">Top picks that everyone is loving this week.</p>
+          </div>
+          <a href="#trending" class="section-view-all">
+            <span>View All</span>
+            <i data-lucide="arrow-right" width="16" height="16"></i>
+          </a>
+        </div>
+
+        <div class="product-grid">
+          
+          <!-- Product 1 -->
+          <article class="product-card">
+            <span class="product-badge">BESTSELLER</span>
+            <button class="wishlist-btn-absolute" aria-label="Add to wishlist" onclick="toggleWishlist(this)">
+              <i data-lucide="heart" width="18" height="18"></i>
+            </button>
+            <div class="product-image-container">
+              <img src="https://images.unsplash.com/photo-1608043152269-423dbba4e7e1?w=300&auto=format&fit=crop&q=80" alt="Nebula Bluetooth Speaker Black" loading="lazy">
+            </div>
+            <div class="product-info-group">
+              <h3 class="product-name">Bluetooth Speaker Pro</h3>
+              <div class="product-rating">
+                <i data-lucide="star" class="star-icon" width="14" height="14"></i>
+                <span class="rating-value">4.8</span>
+              </div>
+            </div>
+            <div class="product-footer">
+              <span class="product-price">₹3,499</span>
+              <button class="cart-btn-icon" aria-label="Add Bluetooth Speaker Pro to cart" onclick="addToCart(this, 'Bluetooth Speaker Pro')">
+                <i data-lucide="shopping-cart" width="16" height="16"></i>
+              </button>
+            </div>
+          </article>
+
+          <!-- Product 2 -->
+          <article class="product-card">
+            <button class="wishlist-btn-absolute" aria-label="Add to wishlist" onclick="toggleWishlist(this)">
+              <i data-lucide="heart" width="18" height="18"></i>
+            </button>
+            <div class="product-image-container">
+              <img src="https://images.unsplash.com/photo-1508685096489-7aacd43bd3b1?w=300&auto=format&fit=crop&q=80" alt="Nebula Classic Smart Watch" loading="lazy">
+            </div>
+            <div class="product-info-group">
+              <h3 class="product-name">Smart Watch Series X</h3>
+              <div class="product-rating">
+                <i data-lucide="star" class="star-icon" width="14" height="14"></i>
+                <span class="rating-value">4.6</span>
+              </div>
+            </div>
+            <div class="product-footer">
+              <span class="product-price">₹8,999</span>
+              <button class="cart-btn-icon" aria-label="Add Smart Watch Series X to cart" onclick="addToCart(this, 'Smart Watch Series X')">
+                <i data-lucide="shopping-cart" width="16" height="16"></i>
+              </button>
+            </div>
+          </article>
+
+          <!-- Product 3 -->
+          <article class="product-card">
+            <button class="wishlist-btn-absolute" aria-label="Add to wishlist" onclick="toggleWishlist(this)">
+              <i data-lucide="heart" width="18" height="18"></i>
+            </button>
+            <div class="product-image-container">
+              <img src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=300&auto=format&fit=crop&q=80" alt="Nebula Canvas Commuter Backpack" loading="lazy">
+            </div>
+            <div class="product-info-group">
+              <h3 class="product-name">Commuter Canvas Backpack</h3>
+              <div class="product-rating">
+                <i data-lucide="star" class="star-icon" width="14" height="14"></i>
+                <span class="rating-value">4.7</span>
+              </div>
+            </div>
+            <div class="product-footer">
+              <span class="product-price">₹1,799</span>
+              <button class="cart-btn-icon" aria-label="Add Commuter Canvas Backpack to cart" onclick="addToCart(this, 'Commuter Canvas Backpack')">
+                <i data-lucide="shopping-cart" width="16" height="16"></i>
+              </button>
+            </div>
+          </article>
+
+          <!-- Product 4 -->
+          <article class="product-card">
+            <span class="product-badge" style="background-color: var(--success);">NEW</span>
+            <button class="wishlist-btn-absolute" aria-label="Add to wishlist" onclick="toggleWishlist(this)">
+              <i data-lucide="heart" width="18" height="18"></i>
+            </button>
+            <div class="product-image-container">
+              <img src="https://images.unsplash.com/photo-1590658268037-6bf12165a8df?w=300&auto=format&fit=crop&q=80" alt="Nebula Pro Active Earbuds" loading="lazy">
+            </div>
+            <div class="product-info-group">
+              <h3 class="product-name">Active Noise-Cancelling Earbuds</h3>
+              <div class="product-rating">
+                <i data-lucide="star" class="star-icon" width="14" height="14"></i>
+                <span class="rating-value">4.9</span>
+              </div>
+            </div>
+            <div class="product-footer">
+              <span class="product-price">₹4,999</span>
+              <button class="cart-btn-icon" aria-label="Add Active Noise-Cancelling Earbuds to cart" onclick="addToCart(this, 'Active Noise-Cancelling Earbuds')">
+                <i data-lucide="shopping-cart" width="16" height="16"></i>
+              </button>
+            </div>
+          </article>
+
+          <!-- Product 5 -->
+          <article class="product-card">
+            <button class="wishlist-btn-absolute" aria-label="Add to wishlist" onclick="toggleWishlist(this)">
+              <i data-lucide="heart" width="18" height="18"></i>
+            </button>
+            <div class="product-image-container">
+              <img src="https://images.unsplash.com/photo-1602143407151-7111542de6e8?w=300&auto=format&fit=crop&q=80" alt="Nebula Vacuum Insulated Steel Bottle" loading="lazy">
+            </div>
+            <div class="product-info-group">
+              <h3 class="product-name">Insulated Steel Water Bottle</h3>
+              <div class="product-rating">
+                <i data-lucide="star" class="star-icon" width="14" height="14"></i>
+                <span class="rating-value">4.5</span>
+              </div>
+            </div>
+            <div class="product-footer">
+              <span class="product-price">₹599</span>
+              <button class="cart-btn-icon" aria-label="Add Insulated Steel Water Bottle to cart" onclick="addToCart(this, 'Insulated Steel Water Bottle')">
+                <i data-lucide="shopping-cart" width="16" height="16"></i>
+              </button>
+            </div>
+          </article>
+
+          <!-- Product 6 -->
+          <article class="product-card">
+            <span class="product-badge">HOT DEALS</span>
+            <button class="wishlist-btn-absolute" aria-label="Add to wishlist" onclick="toggleWishlist(this)">
+              <i data-lucide="heart" width="18" height="18"></i>
+            </button>
+            <div class="product-image-container">
+              <img src="https://images.unsplash.com/photo-1572635196237-14b3f281503f?w=300&auto=format&fit=crop&q=80" alt="Nebula Urban Classic Sunglasses" loading="lazy">
+            </div>
+            <div class="product-info-group">
+              <h3 class="product-name">Urban Classic Sunglasses</h3>
+              <div class="product-rating">
+                <i data-lucide="star" class="star-icon" width="14" height="14"></i>
+                <span class="rating-value">4.7</span>
+              </div>
+            </div>
+            <div class="product-footer">
+              <span class="product-price">₹1,299</span>
+              <button class="cart-btn-icon" aria-label="Add Urban Classic Sunglasses to cart" onclick="addToCart(this, 'Urban Classic Sunglasses')">
+                <i data-lucide="shopping-cart" width="16" height="16"></i>
+              </button>
+            </div>
+          </article>
+
+        </div>
+      </section>
+
+      <!-- ==================== PROMO BANNERS SECTION ==================== -->
+      <section class="promo-section animate-on-scroll" aria-label="Campaign marketing banners">
+        <div class="promo-grid">
+          
+          <!-- Banner One: Summer Sale -->
+          <div class="promo-card summer-sale">
+            <img src="assets/promo_summer.png" alt="Handbag, hat, and sunglasses on blue background" class="promo-bg-img" loading="lazy">
+            <div class="promo-content">
+              <span class="promo-label">SUMMER SALE</span>
+              <h3 class="promo-title">Up To 50% Off<br>On Bestsellers</h3>
+              <a href="#offers" class="promo-btn">
+                <span>Shop Sale</span>
+                <i data-lucide="arrow-right" width="14" height="14"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Banner Two: Fresh Finds -->
+          <div class="promo-card fresh-finds">
+            <img src="assets/promo_fresh.png" alt="Sneakers and minimal vase on cream background" class="promo-bg-img" loading="lazy">
+            <div class="promo-content">
+              <span class="promo-label">NEW RELEASES</span>
+              <h3 class="promo-title">Fresh Finds<br>You'll Love</h3>
+              <a href="#new" class="promo-btn">
+                <span>Explore Now</span>
+                <i data-lucide="arrow-right" width="14" height="14"></i>
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ==================== FEATURED COLLECTIONS ==================== -->
+      <section class="featured-section animate-on-scroll" aria-labelledby="featured-heading">
+        <div class="section-header">
+          <div class="section-title-group">
+            <h2 class="section-title" id="featured-heading">Featured Collections</h2>
+            <p class="section-subtitle">Carefully curated collections just for you.</p>
+          </div>
+          <a href="#collections" class="section-view-all">
+            <span>View All</span>
+            <i data-lucide="arrow-right" width="16" height="16"></i>
+          </a>
+        </div>
+
+        <div class="collection-grid">
+          
+          <!-- Collection 1 -->
+          <article class="collection-card" onclick="window.location.hash='collections/fashion'">
+            <img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?w=400&auto=format&fit=crop&q=80" alt="Elegant Outfits backdrop" class="collection-bg" loading="lazy">
+            <div class="collection-content">
+              <h3 class="collection-title">Elegant Outfits</h3>
+              <span class="collection-subtitle">
+                <span>Browse Styles</span>
+                <i data-lucide="arrow-right" width="14" height="14"></i>
+              </span>
+            </div>
+          </article>
+
+          <!-- Collection 2 -->
+          <article class="collection-card" onclick="window.location.hash='collections/skincare'">
+            <img src="https://images.unsplash.com/photo-1608248597481-496100c80836?w=400&auto=format&fit=crop&q=80" alt="Skincare Essentials backdrop" class="collection-bg" loading="lazy">
+            <div class="collection-content">
+              <h3 class="collection-title">Skincare Essentials</h3>
+              <span class="collection-subtitle">
+                <span>Explore Beauty</span>
+                <i data-lucide="arrow-right" width="14" height="14"></i>
+              </span>
+            </div>
+          </article>
+
+          <!-- Collection 3 -->
+          <article class="collection-card" onclick="window.location.hash='collections/gaming'">
+            <img src="https://images.unsplash.com/photo-1600861195091-690c92f1d2cc?w=400&auto=format&fit=crop&q=80" alt="Gaming Accessories backdrop" class="collection-bg" loading="lazy">
+            <div class="collection-content">
+              <h3 class="collection-title">Gaming Accessories</h3>
+              <span class="collection-subtitle">
+                <span>Shop Gaming</span>
+                <i data-lucide="arrow-right" width="14" height="14"></i>
+              </span>
+            </div>
+          </article>
+
+          <!-- Collection 4 -->
+          <article class="collection-card" onclick="window.location.hash='collections/living'">
+            <img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=400&auto=format&fit=crop&q=80" alt="Modern Living backdrop" class="collection-bg" loading="lazy">
+            <div class="collection-content">
+              <h3 class="collection-title">Modern Living</h3>
+              <span class="collection-subtitle">
+                <span>View Decor</span>
+                <i data-lucide="arrow-right" width="14" height="14"></i>
+              </span>
+            </div>
+          </article>
+
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- ==================== BENEFITS BAR ==================== -->
+  <section class="benefits-bar" aria-label="Customer assurances">
+    <div class="container">
+      <div class="benefits-container" id="benefitsContainer">
+        
+        <!-- Benefit 1 -->
+        <div class="benefit-item">
+          <div class="benefit-icon-box">
+            <i data-lucide="truck" width="24" height="24"></i>
+          </div>
+          <div class="benefit-text-box">
+            <span class="benefit-title">Free Shipping</span>
+            <span class="benefit-subtitle">On orders over ₹499</span>
+          </div>
+        </div>
+
+        <!-- Benefit 2 -->
+        <div class="benefit-item">
+          <div class="benefit-icon-box">
+            <i data-lucide="refresh-cw" width="24" height="24"></i>
+          </div>
+          <div class="benefit-text-box">
+            <span class="benefit-title">Easy Returns</span>
+            <span class="benefit-subtitle">Within 30 days</span>
+          </div>
+        </div>
+
+        <!-- Benefit 3 -->
+        <div class="benefit-item">
+          <div class="benefit-icon-box">
+            <i data-lucide="lock" width="24" height="24"></i>
+          </div>
+          <div class="benefit-text-box">
+            <span class="benefit-title">Secure Payments</span>
+            <span class="benefit-subtitle">100% protected</span>
+          </div>
+        </div>
+
+        <!-- Benefit 4 -->
+        <div class="benefit-item">
+          <div class="benefit-icon-box">
+            <i data-lucide="headphones" width="24" height="24"></i>
+          </div>
+          <div class="benefit-text-box">
+            <span class="benefit-title">24/7 Support</span>
+            <span class="benefit-subtitle">We're here to help</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== FOOTER SECTION ==================== -->
+  <footer class="footer-main" aria-label="Site footer">
+    <div class="container">
+      
+      <div class="footer-top">
+        
+        <!-- Brand Column -->
+        <div class="footer-brand-column">
+          <a href="#" class="logo" aria-label="Nebula Homepage" style="margin-bottom: 10px;">
+            <div class="logo-icon-wrapper" style="background-color: var(--primary-navy); color: var(--white);">
+              <i data-lucide="shopping-bag" width="22" height="22"></i>
+            </div>
+            <div class="logo-text">
+              <span class="logo-title">NEBULA</span>
+              <span class="logo-subtitle">Live Better. Every Day.</span>
+            </div>
+          </a>
+          <p class="footer-brand-desc">Nebula is a premium multi-category platform crafted to offer sleek designs and functional living solutions. Live better, every day.</p>
+          <div class="social-links">
+            <a href="#" class="social-icon-btn" aria-label="Visit Facebook page"><i data-lucide="facebook" width="18" height="18"></i></a>
+            <a href="#" class="social-icon-btn" aria-label="Visit Twitter page"><i data-lucide="twitter" width="18" height="18"></i></a>
+            <a href="#" class="social-icon-btn" aria-label="Visit Instagram feed"><i data-lucide="instagram" width="18" height="18"></i></a>
+            <a href="#" class="social-icon-btn" aria-label="Visit YouTube channel"><i data-lucide="youtube" width="18" height="18"></i></a>
+          </div>
+        </div>
+
+        <!-- Links Column 1: Customer Service -->
+        <div>
+          <h4 class="footer-column-title">Customer Service</h4>
+          <ul class="footer-links-list">
+            <li><a href="#help">Help & Contact</a></li>
+            <li><a href="#shipping">Shipping & Delivery</a></li>
+            <li><a href="#returns">Returns & Refunds</a></li>
+            <li><a href="#orders">Order Tracking</a></li>
+            <li><a href="#faq">FAQs</a></li>
+          </ul>
+        </div>
+
+        <!-- Links Column 2: Policies -->
+        <div>
+          <h4 class="footer-column-title">Policies</h4>
+          <ul class="footer-links-list">
+            <li><a href="#privacy">Privacy Policy</a></li>
+            <li><a href="#terms">Terms of Service</a></li>
+            <li><a href="#cookie">Cookie Settings</a></li>
+            <li><a href="#intellectual">Intellectual Property</a></li>
+            <li><a href="#affiliate">Affiliate Program</a></li>
+          </ul>
+        </div>
+
+        <!-- Newsletter Column -->
+        <div>
+          <h4 class="footer-column-title">Newsletter</h4>
+          <p class="newsletter-desc">Subscribe to get special offers, free giveaways, and once-in-a-lifetime deals.</p>
+          <form action="#" class="newsletter-form" id="newsletterForm">
+            <input 
+              type="email" 
+              placeholder="Enter your email address" 
+              class="newsletter-input" 
+              aria-label="Email address for newsletter subscription"
+              required
+            >
+            <button type="submit" class="newsletter-btn">Subscribe</button>
+          </form>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <span class="copyright">&copy; 2026 Nebula Inc. All rights reserved.</span>
+        <div class="payment-methods">
+          <!-- Standard thin line SVG payment icons for premium DTC appearance -->
+          <svg class="payment-badge" viewBox="0 0 50 30" width="38" xmlns="http://www.w3.org/2000/svg" aria-label="Visa Card">
+            <rect width="50" height="30" rx="4" fill="#FFFFFF" stroke="#E8E8E8" stroke-width="1.5"/>
+            <path d="M12 10 L16 20 L18 10 M18 10 L22 20 M24 10 L28 10 M26 10 L26 20" stroke="#1A1F71" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+          </svg>
+          <svg class="payment-badge" viewBox="0 0 50 30" width="38" xmlns="http://www.w3.org/2000/svg" aria-label="Mastercard">
+            <rect width="50" height="30" rx="4" fill="#FFFFFF" stroke="#E8E8E8" stroke-width="1.5"/>
+            <circle cx="21" cy="15" r="7" fill="#EB001B" opacity="0.85"/>
+            <circle cx="29" cy="15" r="7" fill="#FF5F00" opacity="0.85"/>
+          </svg>
+          <svg class="payment-badge" viewBox="0 0 50 30" width="38" xmlns="http://www.w3.org/2000/svg" aria-label="Apple Pay">
+            <rect width="50" height="30" rx="4" fill="#FFFFFF" stroke="#E8E8E8" stroke-width="1.5"/>
+            <path d="M16,13 C16,9.5 19.5,9.5 19.5,9.5 C19.5,9.5 18,12.5 16,13 Z" fill="#000000"/>
+            <path d="M22,12 C20.5,12 19,13 18.5,13.5 C18,13 16.5,12 15,12 C12,12 10,14.5 10,18.5 C10,22.5 13.5,24 15,24 C16.5,24 18,23 18.5,22.5 C19,23 20.5,24 22,24 C24.5,24 27,21.5 27,18 C27,14 24.5,12 22,12 Z" fill="#000000"/>
+          </svg>
+          <svg class="payment-badge" viewBox="0 0 50 30" width="38" xmlns="http://www.w3.org/2000/svg" aria-label="PayPal">
+            <rect width="50" height="30" rx="4" fill="#FFFFFF" stroke="#E8E8E8" stroke-width="1.5"/>
+            <path d="M18,9 L23,9 C26,9 28,10.5 27.5,13.5 C27,16.5 24.5,18 21.5,18 L19,18 L17.5,24 L14.5,24 L18,9 Z" fill="#003087"/>
+            <path d="M21,12 L26,12 C29,12 31,13.5 30.5,16.5 C30,19.5 27.5,21 24.5,21 L22,21 L20.5,27 L17.5,27 L21,12 Z" fill="#0079C1" opacity="0.8"/>
+          </svg>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- ==================== MOBILE DRAWER & OVERLAY ==================== -->
+  <div class="drawer-overlay" id="drawerOverlay" aria-hidden="true"></div>
+  <dialog class="mobile-drawer" id="mobileDrawer" aria-modal="true" aria-label="Navigation Drawer">
+    <div class="drawer-header">
+      <a href="#" class="logo" aria-label="Nebula Homepage">
+        <div class="logo-icon-wrapper">
+          <i data-lucide="shopping-bag" width="20" height="20"></i>
+        </div>
+        <div class="logo-text">
+          <span class="logo-title" style="font-size: 18px;">NEBULA</span>
+        </div>
+      </a>
+      <button class="drawer-close-btn" id="drawerCloseBtn" aria-label="Close navigation menu">
+        <i data-lucide="x" width="20" height="20"></i>
+      </button>
+    </div>
+    
+    <div class="drawer-content">
+      
+      <!-- Search inside drawer for mobile -->
+      <div class="drawer-nav-section">
+        <div class="search-wrapper" style="display: flex; width: 100%; margin-bottom: 20px;">
+          <i data-lucide="search" class="search-icon-left" width="18" height="18"></i>
+          <form action="#" class="drawer-search-form" style="width: 100%; height: 100%;">
+            <input type="text" class="search-input" placeholder="Search products..." aria-label="Drawer search Input">
+            <button type="submit" class="search-btn" aria-label="Submit Drawer Search"><i data-lucide="arrow-right" width="18" height="18"></i></button>
+          </form>
+        </div>
+      </div>
+
+      <!-- Links list -->
+      <div class="drawer-nav-section">
+        <h4 class="drawer-section-title">Menu</h4>
+        <nav>
+          <ul class="drawer-nav-list">
+            <li><a href="#" class="drawer-nav-link"><i data-lucide="home" width="18" height="18"></i>Shop Home</a></li>
+            <li><a href="#offers" class="drawer-nav-link"><i data-lucide="percent" width="18" height="18"></i>Hot Deals</a></li>
+            <li><a href="#new" class="drawer-nav-link"><i data-lucide="sparkles" width="18" height="18"></i>New Arrivals</a></li>
+            <li><a href="#brands" class="drawer-nav-link"><i data-lucide="award" width="18" height="18"></i>Featured Brands</a></li>
+            <li><a href="#inspiration" class="drawer-nav-link"><i data-lucide="compass" width="18" height="18"></i>Inspiration</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <!-- Shop categories list -->
+      <div class="drawer-nav-section">
+        <h4 class="drawer-section-title">Shop by Department</h4>
+        <nav>
+          <ul class="drawer-nav-list" style="gap: 12px;">
+            <li><a href="#fashion" class="drawer-nav-link" style="font-size: 14px; font-weight: 500;">Women's Fashion</a></li>
+            <li><a href="#fashion" class="drawer-nav-link" style="font-size: 14px; font-weight: 500;">Men's Fashion</a></li>
+            <li><a href="#beauty" class="drawer-nav-link" style="font-size: 14px; font-weight: 500;">Beauty & Personal Care</a></li>
+            <li><a href="#electronics" class="drawer-nav-link" style="font-size: 14px; font-weight: 500;">Electronics & Gadgets</a></li>
+            <li><a href="#home" class="drawer-nav-link" style="font-size: 14px; font-weight: 500;">Home & Interior</a></li>
+            <li><a href="#sports" class="drawer-nav-link" style="font-size: 14px; font-weight: 500;">Sports & Outdoors</a></li>
+            <li><a href="#toys" class="drawer-nav-link" style="font-size: 14px; font-weight: 500;">Toys & Games</a></li>
+            <li><a href="#automotive" class="drawer-nav-link" style="font-size: 14px; font-weight: 500;">Automotive Parts</a></li>
+            <li><a href="#books" class="drawer-nav-link" style="font-size: 14px; font-weight: 500;">Books & Stationery</a></li>
+          </ul>
+        </nav>
+      </div>
+
+    </div>
+
+    <!-- Support info in drawer bottom -->
+    <div class="drawer-footer">
+      <div class="drawer-support-box">
+        <i data-lucide="headphones" width="18" height="18" style="color: var(--primary-navy);"></i>
+        <span>Help Support: <a href="tel:+917763058747" style="font-weight: 700;">+91 7763058747</a></span>
+      </div>
+    </div>
+  </dialog>
+
+  <!-- ==================== SCRIPTS ==================== -->
+  <!-- Swiper.js Slider JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <!-- Lucide Outline Icons CDN -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <!-- Custom Javascript Logic -->
+  <script src="script.js"></script>
+
+</body>
+</html>
