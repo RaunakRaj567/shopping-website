@@ -1508,6 +1508,7 @@ img {
   .hero-panels {
     width: 100%;
     position: relative;
+    height: auto;
     min-height: 360px;
   }
 
