@@ -609,45 +609,6 @@ img {
   position: relative;
 }
 
-.plant-pedestal {
-  position: absolute;
-  bottom: 24px;
-  right: 48px;
-  z-index: 4;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.pedestal {
-  width: 80px;
-  height: 40px;
-  background-color: #EAEAEA;
-  border-radius: 6px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-}
-
-.plant-pot {
-  width: 32px;
-  height: 48px;
-  position: absolute;
-  bottom: 36px;
-  background: var(--white);
-  border-radius: 4px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
-}
-
-.plant-leaves {
-  position: absolute;
-  bottom: 80px;
-  width: 90px;
-  height: auto;
-  pointer-events: none;
-}
 
 /* Custom hero dot navigation */
 .hero-dots {
@@ -1586,10 +1547,6 @@ img {
     height: 90%;
   }
 
-  .plant-pedestal {
-    right: 20px;
-    bottom: 10px;
-  }
 
   /* Trending Grid becomes 2 columns */
   .product-grid {
